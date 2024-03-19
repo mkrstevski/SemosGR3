@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "The Lion King",
+        "year": 1994,
+        "rating": 8.5
+    },
+    {
+        "id": 2,
+        "name": "Toy Story",
+        "year": 1995,
+        "rating": 8.3
+    },
+    {
+        "id": 3,
+        "name": "The Matrix",
+        "year": 1999,
+        "rating": 8.7
+    },
+    {
+        "id": 4,
+        "name": "Forrest Gump",
+        "year": 1994,
+        "rating": 8.8
+    },
+    {
+        "id": 5,
+        "name": "Gladiator",
+        "year": 2000,
+        "rating": 8.5
+    },
+    {
+        "id": 6,
+        "name": "Titanic",
+        "year": 1997,
+        "rating": 7.8
+    },
+    {
+        "id": 7,
+        "name": "Inception",
+        "year": 2010,
+        "rating": 8.8
+    }
+]
