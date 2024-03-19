@@ -5,18 +5,7 @@ const read = async () => {
     return new Promise((resolve, reject) => {
         fs.readFile("data.json", "utf-8", (err, data) => {
             if (err) {
-                if (err.code === 'ENOENT') {
-                    // File doesn't exist, create it with an empty array
-                    fs.writeFile("data.json", '[]', (err) => {
-                        if (err) {
-                            reject(err);
-                        } else {
-                            resolve([]);
-                        }
-                    });
-                } else {
-                    reject(err);
-                }
+                reject(err);
             } else {
                 data = JSON.parse(data);
                 return resolve(data);
@@ -56,18 +45,18 @@ const deleteMovie = async (id) => {
     await write(movies);
 }
 
-const addNewMovie = async (newCarData) => {
+const addNewMovie = async (data) => {
     let movies = await read();
-    movies.push(newCarData);
+    movies.push(data);
     await write(movies);
 }
-const editMovie = async (id, editCarData) => {
+const editMovie = async (id, data) => {
     let movies = await read();
     movies = movies.map(movie => {
         if (movie.id === id) {
             return {
                 ...movie,
-                ...editCarData
+                ...data
             };
         }
         return movie;
