@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Измени продукт</title>
+</head>
+<body>
+    <form action="/form-edit" method="post">
+        <input type="text" name="Name" placeholder="Име на продукт" value="<%= data.Name %>"/><br>
+        <input type="text" name="Manufacturer" placeholder="Произведувач" value="<%= data.Manufacturer %>"/><br>
+        <input type="number" name="Quantity" placeholder="Количина" value="<%= data.Quantity %>"/><br>
+        <input type="number" name="DaysLeftToUse" placeholder="Рок на траење" value="<%= data.DaysLeftToUse %>"/><br>
+        <input type="text" name="PlaceWhereAvalible" placeholder="Каде може да се купи" value="<%= data.PlaceWhereAvalible %>"/><br>
+        <button type="submit">Измени</button>
+        </form>
+</body>
+</html>

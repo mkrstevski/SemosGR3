@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Formular</title>
+</head>
+<body style="background-color: gainsboro; background-position: center; font-family: Georgia, 'Times New Roman', Times, serif;">
+    <h3 style="text-align: center;">ПРОДАВНИЦА ЗА КОМПЈУТЕРСКА ОПРЕМА</h3>
+    <div style="height:140px; background-image: url('https://www.laptopsdirect.ie/files/images/ld/ld-hardware-bundle-deals-960x150-search-page-banner.jpg');">
+    
+    
+    </div>
+    <hr>
+    <%- include('partials/header') %>
+    <table border="2" width="100%">
+        <tr>
+            <th>Продукт</th>
+            <th>Произведувач</th>
+            <th>Количина</th>
+            <th>Рок на траење</th>
+            <th>Достапен во</th>
+            <th>Избриши</th>
+            <th>Измени</th>
+        </tr>
+        <% data.forEach((student, i) => {  %>
+            <tr>
+                <td><%= student.Name %></td>
+                <td><%= student.Manufacturer %></td>
+                <td><%= student.Quantity %></td>
+                <td><%= student.DaysLeftToUse %></td>
+                <td><%= student.PlaceWhereAvalible %></td>
+                <td style="color: red;">
+                    <a href="/delete?productIndex=<%= i%>" style="color:red">Бриши</a>
+                </td>
+                <td>
+                    <a href="/edit?productIndex=<%= i%>">Измени</a>
+                </td>
+            </tr>
+        <% }) %>
+    </table>
+    <footer>
+        <div style="text-align: center; position: absolute; bottom: 0; background-color: black; color:white; width: 100%;">
+            Marko krstevski - SHOP
+        </div>
+    </footer>
+    
+</body>
+</html>
